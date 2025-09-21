@@ -45,7 +45,7 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
       const parsedBody = Buffer.concat(body).toString();
       const formData = querystring.parse(parsedBody); // convert to object
-      console.log('Form Data:', formData);
+      console.log('Form Data:', formData); 
 
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(`
